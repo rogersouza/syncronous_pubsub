@@ -15,8 +15,8 @@ end
 ## Emmiting an event
 #### To emmit an event, use `EventMachine.publish/2`
 ```elixir
-# To "start" our subscribers, we have to either add it to our app's application.ex
-# or start it manually by calling GenServer.start_link(OurSubscriber, [])
+# To "start" our subscribers, we either have to add them to our app's application.ex
+# or start them manually by calling GenServer.start_link(OurSubscriber, [])
 
 iex> alias EventMachine.Message
 iex> event_message = Message.new("unique_event", "unique_topic", data: %{user: "user123"})
